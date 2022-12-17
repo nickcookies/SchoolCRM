@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css" >
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <title>HardsofTek School CRM- Courses</title>
+</head>
+<body>
+    <header>
+        <h1>HardsofTek School CRM</h1>
+    </header>
+     <main >
+
+    <div id="left_sidebar" > 
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="courses">Courses</a></li>
+                <li><a href="trainers">Trainers</a></li>
+                <li><a href="students">Students</a></li>
+                <li><a href="assignments">Assignements</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main_page" class="main_courses">
+        <form id="CoursesForm" action = "/courses/add" method = "POST">
+            <h2>Add Course</h2>
+            <span><label>Title</label><input type="text" name="title" placeholder="Archeology"></span>
+            <span><label>Stream</label><input type="text" name="stream" placeholder="A lecture on archaic stuff."></span>
+            <span><label>Type</label><select name="type">
+                <option value="Part Time">Part Time</option>
+                <option value="Full Time">Full Time</option>
+                <option value="Online">Online</option>
+            </select></span>
+            <span><label>Start Date</label><input type="date" name="startDate" placeholder=""></span>
+            <span><label>End Date</label><input type="date" name="endDate" placeholder=""></span>
+            <span><input type="submit" name="submit" value="Submit"></span>
+
+
+        </form>    
+        
+        <table id="CoursesTable">
+            <thead>
+                <td>Title</td>
+                <td>Stream</td>
+                <td>Type</td>
+                <td>Start Date</td>
+                <td>End Date</td>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i< courses.length; i++) { %>
+                    <tr>
+                        <td><%= courses[i].title %></td>
+                        <td><%= courses[i].stream %></td>
+                        <td><%= courses[i].type %></td>
+                        <td><%= courses[i].start_date  %></td>
+                        <td><%= courses[i].end_date %></td>
+                    </tr>
+                <% }%>   
+            </tbody>
+        </table>
+        <button id="DeleteCourses" onclick="window.location.replace('<%= url %>'+'/courses/deleteall');">Delete All</button>
+
+    
+    </div>
+
+
+    <div id="right_sidebar"> 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium amet quos eius, asperiores ducimus dicta alias porro? Quidem, deleniti? Commodi, similique temporibus. Perspiciatis totam ad cupiditate repudiandae quasi exercitationem commodi quis modi harum quo quas rem ea accusamus blanditiis, aliquid assumenda nisi nam dolores voluptas eos et sed? Quisquam repudiandae ullam adipisci asperiores, doloremque illum quidem facere error a tenetur fuga molestias, fugiat aliquam consequuntur quae ratione? Maxime vitae excepturi, dolores, vel consectetur delectus est perspiciatis ipsam, cum a dignissimos odio! Eligendi voluptatum cumque, dolore aut facilis quidem ad mollitia dolorum saepe beatae ipsa, magni, illum quibusdam at! Iste totam, mollitia id eos quam vero, nobis veritatis, voluptate cumque molestiae ipsum voluptatibus? Tempora saepe beatae laudantium aspernatur praesentium error, doloremque nihil neque quia voluptatum quasi velit corrupti ullam officia fugiat odio numquam dolores obcaecati aut accusamus cumque iure libero magni culpa. Atque soluta molestias quaerat animi. Doloremque repudiandae commodi cumque totam perspiciatis expedita reiciendis alias quidem obcaecati eum. Eos maxime eaque recusandae corrupti vitae itaque aliquam autem dignissimos quae asperiores fuga a fugiat veniam, eligendi sint? Maiores omnis labore dolore odit, delectus, quis, dignissimos recusandae expedita suscipit quam numquam. Molestiae ipsam eligendi sequi, alias, reiciendis impedit inventore quidem eius dolores perspiciatis quibusdam soluta quod totam officia quia! Vel impedit assumenda nostrum eius aperiam dolor tempora doloremque nemo ipsam nihil magni corrupti dolores dolore, soluta harum optio quia tenetur at praesentium voluptas sapiente. Ratione beatae, ipsum iste, aliquid rem maxime veritatis assumenda veniam rerum, deleniti cum! Accusamus vitae culpa error qui magnam dolor assumenda, voluptas delectus excepturi iusto veritatis alias modi nobis earum repudiandae provident ut eos dolorum sed quibusdam saepe quo rem! Consequatur quos dolorum quam eum nemo nobis molestiae hic natus ipsam minima quod ab dicta, cum animi ipsum, quis quibusdam reiciendis adipisci veritatis. Nisi ipsam velit voluptatum voluptates?
+    </div>
+       
+
+     </main>
+
+     <footer class="container-fluid">
+        <p style="float:left!important; margin-left:20px;">Made by  <a class="rickroll" href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">Wix.com</a> </p>
+        <p>Copyright 2020 - All rights reserved.</p>
+    </footer>
+</body>
+<script src=""></script> 
+</html>

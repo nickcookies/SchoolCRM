@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css" >
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>HardsofTek School CRM - Students</title>
+</head>
+<body>
+    <header>
+        <h1>HardsofTek School CRM</h1>
+    </header>
+     <main >
+
+    <div id="left_sidebar" > 
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="courses">Courses</a></li>
+                <li><a href="trainers">Trainers</a></li>
+                <li><a href="students">Students</a></li>
+                <li><a href="assignments">Assignements</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+        <div id="main_page" class="main_students">
+            <form id="StudentsForm" action="/students/add" method="POST">
+                <h2>Add Student</h2>
+                <span><label>First Name</label><input type="text" name="fname" placeholder="John"></span>
+                <span><label>Last Name</label><input type="text" name="lname" placeholder="Doe"></span>
+                <span><label>Date of Birth</label><input type="date" name="dateOfBirth" placeholder=""></span>
+                <span><label>Tuition Feed</label><input type="number" name="tuitionFees" placeholder="3000"></span>
+                <span><input type="submit" name="submit" value="Submit"></span>
+
+
+            </form>    
+            
+            <table id="StudentsTable">
+                <thead>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Date of Birth</td>
+                    <td>Tuition Feed</td>
+                    <td>Edit</td>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i< students.length; i++) { %>
+                        <tr>
+                            <td><%= students[i].firstName %></td>
+                            <td><%= students[i].lastName %></td>
+                            <td><%= students[i].dateOfBirth %></td>
+                            <td><%= students[i].tuitionFees %></td>
+                        </tr>
+                    <% }%>  
+                </tbody>
+            </table>
+            <button id="DeleteStudents" onclick="window.location.replace('<%= url %>'+'/students/deleteall');">Delete All</button>
+
+        
+        </div>
+
+    <div id="right_sidebar">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia nihil tenetur explicabo deserunt placeat commodi voluptas doloribus iure hic? Iste nulla illo unde minima iusto? Autem consectetur modi atque esse ipsum numquam assumenda libero repudiandae dolore magni, dicta aspernatur asperiores sapiente voluptas velit, incidunt hic praesentium? Ab fugit, dolor quidem labore veritatis, ullam, fuga deserunt repellendus maxime quia soluta consequuntur omnis quis quaerat suscipit assumenda corporis nostrum. Quasi eaque natus quod dolorum, nam nulla ex eius vitae sit. Amet dolore deserunt ullam accusantium dolorum, illum minima quasi quia quod ratione ipsa eaque rem, odio alias harum culpa error consequatur? Obcaecati, quibusdam. Facere vitae culpa consectetur dicta omnis in nulla, ipsum dolorum architecto neque corrupti magnam temporibus? Earum deserunt, et eius voluptatibus adipisci assumenda eum eligendi aliquid! Ratione repellat provident delectus iste maiores. Delectus enim ipsum aperiam, consectetur minus esse tenetur iste eum? Iure, adipisci sunt molestias perspiciatis necessitatibus cumque, itaque maiores libero quam iste sapiente nesciunt omnis sequi temporibus. Illum fugit blanditiis tempore impedit tempora ab quas aspernatur nesciunt nobis unde aut placeat, inventore voluptatem molestiae pariatur reiciendis exercitationem rerum provident vitae, itaque ducimus aperiam recusandae quae? Perspiciatis illo nisi necessitatibus assumenda quis, in mollitia, officiis fugit consectetur nostrum reprehenderit aspernatur id aliquam enim ullam dolor voluptate earum laboriosam repellat reiciendis molestiae praesentium velit nemo. Aperiam dignissimos odit excepturi asperiores dolor. Cumque totam laboriosam asperiores similique mollitia quaerat nostrum explicabo quos? Quae ut impedit ullam mollitia accusantium, nobis iure ab provident quis sint rem tempore iste aliquid autem id, repellendus magni in quod at repudiandae maiores voluptatum sed? Culpa aut quam in ipsum eos quos architecto delectus neque ea eius quidem reiciendis nisi quis harum dolorem excepturi deserunt recusandae nihil quisquam, iste ad ullam voluptatem! Ducimus dicta mollitia repudiandae quam, quis delectus, ex eius rem eligendi tempora illum corporis, debitis aut iusto vitae reprehenderit voluptates soluta officia. Minima velit suscipit quae? </div>
+       
+
+     </main>
+
+     <footer class="container-fluid">
+        <p style="float:left!important; margin-left:20px;">Made by  <a class="rickroll" href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">Wix.com</a> </p>
+        <p>Copyright 2020 - All rights reserved.</p>
+    </footer>
+</body>
+<script src=""></script> 
+</html>

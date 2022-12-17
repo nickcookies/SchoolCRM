@@ -1,0 +1,298 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+    overflow-x: hidden;
+}
+
+
+header{
+    text-align: center;
+    width:100vw;
+    background-color:  	#223c6b;
+    color:#f2f1ec;
+    min-height: 10vh;
+    border-bottom:2px #a5a9b3 solid;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    min-height: 85vh;
+}
+
+main > div{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+main :first-child
+{
+    padding:0;
+}
+
+footer {
+    background-color: #384F79;
+    font-size: 90px;
+    font-size:9pt;
+    min-height: 5vh;
+    color: #f2f1ec;
+    text-align: right;
+    border-top:2px #a5a9b3 solid;
+    box-sizing: border-box;
+    
+}
+footer > p{
+ padding-top:1.5vh;
+ padding-right: 2vw;
+}
+
+#left_sidebar{
+    order:1;
+    width:20vw;
+    background-color: #f4e586;
+    border-right:2px #a5a9b3 solid;
+    box-sizing: border-box;
+}
+
+#main_page{
+    order:2;
+    width:60vw;
+    background-image: url("../images/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.main_assignments{
+    background-image: url("../images/assignments.jpg")!important;
+    background-color: rgba(25, 25, 25, 100);
+    box-shadow:inset 0 0 0 2000px rgba(0 ,0, 0, 0.6);
+}
+
+.main_trainers{
+    background-image: url("../images/trainer.jpg")!important;
+    background-color: rgba(25, 25, 25, 100);
+    box-shadow:inset 0 0 0 2000px rgba(0 ,0, 0, 0.6);
+}
+
+.main_courses{
+    background-image: url("../images/courses.jpg")!important;
+    background-color: rgba(25, 25, 25, 100);
+    box-shadow:inset 0 0 0 2000px rgba(0 ,0, 0, 0.6);
+}
+
+.main_students{
+    background-image: url("../images/students.jpg")!important;
+    background-color: rgba(25, 25, 25, 100);
+    box-shadow:inset 0 0 0 2000px rgba(0 ,0, 0, 0.6);
+}
+
+.main_about{
+    background-image: url("../images/about.jpg")!important;
+    background-color: rgba(25, 25, 25, 100);
+    box-shadow:inset 0 0 0 2000px rgba(0 ,0, 0, 0.6);
+}
+
+
+
+
+
+#right_sidebar{
+    order:3;
+    width:20vw;
+    background-color: #f7eb85;
+    border-left:2px #a5a9b3 solid;
+    box-sizing: border-box;
+}
+
+h1{
+    padding-top: 2.5vh;
+}
+
+nav{
+    width:100%;
+    color:#223c6b;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14pt;
+}
+nav  ul  li
+{
+    width: 100%;
+    display: block;
+    padding:2% 0;
+    background-color: #a5a9b3;
+    border-top:2px #223c6b solid;
+    box-sizing: border-box;
+}
+nav > ul :first-child{
+    padding-bottom:0.5vh;
+    padding-top:0.5vh;
+     border-top:0px;
+}
+
+nav  ul  li  a{
+    text-decoration: none;
+}
+
+nav ul li a:visited{
+    color:#223c6b;
+}
+
+nav  ul  li:hover{
+    background-color:  #223c6b; 
+    display: block;
+}
+
+nav  ul li:hover a{
+    color:#a5a9b3;
+}
+
+nav > ul > li > ul
+{
+    display:none;
+    
+}
+
+nav ul li ul li
+{
+    color :  #223c6b;
+    width: 90%;
+    margin-left:5%;
+}
+
+
+nav ul li ul li:hover
+{
+    color :  #a5a9b3;
+}
+
+nav  ul  li:hover ul
+{
+    display: block;
+    color:#a5a9b3;
+}
+
+form
+{
+    max-width: 50vw;
+}
+
+form span{
+    display:block;
+    margin:1vh 0;
+}
+
+form span label
+{
+    margin-left: 1vw;
+    margin-right: 2vw;
+}
+
+form span input , form span select
+{
+    float: right;
+    margin-left:3vw;
+    min-width:30vw;
+}
+
+input[type="submit"] , button{
+    min-width: 5vw!important;
+    max-width:10vw;
+    background-color: #223c6b;
+    color: #f2f1ec;
+}
+
+
+table {
+    margin-top: 5vh;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+    color:black;
+  }
+  
+  thead tr
+  {
+    background-color: #223c6b;
+    color: white;
+  }
+
+  td, th {
+    border: 1px solid #ddd;
+    padding: 1%;
+  }
+  
+  tr{
+    background-color: #b3b3b3;
+  }
+
+   tr:nth-child(even){
+       background-color: #f2f2f2;
+    }
+  
+
+
+   th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  h2{
+      text-align: center;
+  }
+
+  #DeleteStudents{
+      background-color: sienna;
+      margin-top:5vh;
+      margin-right: 5vw;;
+      min-width:10vw!important;
+      min-height:4vh;
+      float:right;
+  }
+  #DeleteCourses{
+    background-color: sienna;
+    margin-top:5vh;
+    margin-right: 5vw;;
+    min-width:10vw!important;
+    min-height:4vh;
+    float:right;
+}
+#DeleteAssignments{
+    background-color: sienna;
+    margin-top:5vh;
+    margin-right: 5vw;;
+    min-width:10vw!important;
+    min-height:4vh;
+    float:right;
+}
+#DeleteTrainers{
+    background-color: sienna;
+    margin-top:5vh;
+    margin-right: 5vw;;
+    min-width:10vw!important;
+    min-height:4vh;
+    float:right;
+}
+
+.rickroll {
+    color:white;
+}
+.rickroll:visited
+{
+    color:white;
+}
+
+.rickroll:hover{
+    color: #f4e586;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css" >
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>HardsofTek School CRM - Trainers</title>
+</head>
+<body>
+    <header>
+        <h1>HardsofTek School CRM</h1>
+    </header>
+     <main >
+
+    <div id="left_sidebar" > 
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="courses">Courses</a></li>
+                <li><a href="trainers">Trainers</a></li>
+                <li><a href="students">Students</a></li>
+                <li><a href="assignments">Assignements</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main_page" class="main_trainers">
+        <form id="TrainerForm" action="/trainers/add" method="POST">
+            <h2>Add Trainer</h2>
+            <span><label>First Name</label><input type="text" name="fname" placeholder="John"></span>
+            <span><label>Last Name</label><input type="text" name="lname" placeholder="Doe"></span>
+            <span><label>Subject</label><input type="text" name="subject" placeholder="Architecture"></span>
+            <span><input type="submit" name="submit" value="Submit" ></span>
+
+
+        </form>    
+        
+        <table id="TrainerTable">
+            <thead>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Subject</td>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i< trainers.length; i++) { %>
+                    <tr>
+                        <td><%= trainers[i].firstName %></td>
+                        <td><%= trainers[i].lastName %></td>
+                        <td><%= trainers[i].subject %></td>
+
+                    </tr>
+                <% }%>  
+            </tbody>
+        </table>
+        <button id="DeleteTrainers" onclick="window.location.replace('<%= url %>'+'/trainers/deleteall');">Delete All</button>
+
+    
+    </div>
+
+
+    <div id="right_sidebar">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro atque quia architecto asperiores quas dolor voluptatibus provident illum, repellat, esse quaerat explicabo obcaecati molestiae! Ex voluptate facere non tenetur fuga ducimus minus omnis eos earum quo inventore a facilis officiis vitae explicabo, alias dolores provident iure sit quas deserunt fugit debitis tempora quia. Nostrum fuga aliquid explicabo consequatur excepturi cum deserunt, accusamus, ipsum deleniti, ex illum mollitia? Placeat illum assumenda repellendus pariatur quis exercitationem commodi ipsam maiores officia natus. Sed, provident libero. Nam possimus ullam rem mollitia in rerum expedita aliquid nisi similique neque vitae provident vero illum quis minima perspiciatis eveniet suscipit assumenda dolorum et, tempore deleniti harum. Culpa esse deleniti beatae voluptas sequi earum nostrum dolorum ipsam rem sapiente vel itaque, voluptatibus, aliquam optio sint minus voluptate minima velit provident quae ea eos enim? Laudantium adipisci ut aliquam dolores distinctio cumque aliquid. At quasi sunt dolore, ipsum aliquid architecto deleniti provident ipsa sit ullam sapiente quaerat tempore, quia voluptate. Error, delectus. Accusantium consequuntur voluptas laudantium praesentium nihil hic quae ullam eos magnam explicabo commodi soluta quaerat est culpa quibusdam sit, ipsa tempore atque rem! Sapiente dolor, dignissimos distinctio hic cumque quasi! Iure odio, nobis dolorem voluptatibus quia debitis numquam architecto quaerat cupiditate repellendus natus, quae, quisquam ipsam rem nam. Culpa assumenda, aut delectus libero eligendi possimus beatae ut qui tempore cumque doloremque nihil sunt impedit voluptate. Neque velit quaerat labore a tempora alias, quibusdam aut adipisci quis maiores exercitationem nam ad minima vel voluptatem at dolor recusandae perspiciatis, explicabo praesentium inventore necessitatibus nulla quas. Fugit quidem voluptate minus modi harum fugiat autem nobis perferendis praesentium. Cumque rem exercitationem in et culpa, adipisci eaque voluptate non voluptates quaerat quam. Eius architecto laboriosam non praesentium esse molestiae deserunt possimus eum nesciunt perferendis facere porro, beatae voluptatibus eligendi! </div>
+       
+
+     </main>
+
+     <footer class="container-fluid">
+        <p style="float:left!important; margin-left:20px;">Made by  <a class="rickroll" href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">Wix.com</a> </p>
+        <p>Copyright 2020 - All rights reserved.</p>
+    </footer>
+</body>
+<script src=""></script> 
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css" >
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>HardsofTek School CRM - Assignments</title>
+</head>
+<body>
+    <header>
+        <h1>HardsofTek School CRM</h1>
+    </header>
+     <main >
+
+    <div id="left_sidebar" > 
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="courses">Courses</a></li>
+                <li><a href="trainers">Trainers</a></li>
+                <li><a href="students">Students</a></li>
+                <li><a href="assignments">Assignements</a></li>
+                <li><a href="about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main_page" class="main_assignments" >
+        <form id="AssignmentsForm" action="/assignments/add" method="POST">
+            <h2>Add Assignment</h2>
+            <span><label>Title</label><input type="text" name="title" placeholder="Archeology"></span>
+            <span><label>Description</label><input type="text" name="description" placeholder="A lecture on archaic stuff."></span>
+            <span><label>Sub Date Time</label><input type="date" name="subDateTime" placeholder="2020-12-12"></span>
+            <span><label>Oral Mark</label><input type="number" name="oralMark" placeholder="10"></span>
+            <span><label>Total Mark</label><input type="number" name="totalMark" placeholder="20"></span>
+            <span><input type="submit" name="submit" value="Submit"></span>
+        </form>    
+        
+        <table id="AssignmentsTable">
+            <thead>
+                <td>Title</td>
+                <td>Description</td>
+                <td>Sub Date Time</td>
+                <td>Oral Mark</td>
+                <td>Total Mark</td>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i< assignments.length; i++) { %>
+                    <tr>
+                        <td><%= assignments[i].title %></td>
+                        <td><%= assignments[i].description %></td>
+                        <td><%= assignments[i].subDateTime %></td>
+                        <td><%= assignments[i].oralMark %></td>
+                        <td><%= assignments[i].totalMark %></td>
+                    </tr>
+                <% }%>  
+            </tbody>
+        </table>
+        <button id="DeleteAssignments" onclick="window.location.replace('<%= url %>'+'/assignments/deleteall');">Delete All</button>
+
+    
+    </div>
+
+
+    <div id="right_sidebar">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque est blanditiis consequuntur placeat quos laboriosam quasi neque fuga ut ullam. Quidem porro quos, ut optio praesentium veniam consectetur architecto quibusdam delectus hic nemo doloribus? Facilis mollitia fuga, perspiciatis reiciendis, omnis vitae ducimus reprehenderit quis maxime magnam esse. Totam distinctio odio repellat iste fuga tempore, architecto facilis explicabo soluta vitae sequi iure optio ducimus adipisci eligendi consequatur. Beatae quisquam deserunt blanditiis facilis animi at consequuntur impedit nam accusantium quasi fugiat nemo aperiam, eveniet quis, aliquam ducimus illum architecto nihil quam nisi molestiae perferendis odio? Enim, laudantium sint dicta aliquam odit voluptatem iure, inventore, velit quaerat rem voluptates voluptas? Accusamus magnam possimus expedita sed laboriosam culpa fugit repellendus magni est modi consequatur eos, dicta rem iste officia repellat voluptatibus rerum mollitia! Tenetur possimus esse eos distinctio quisquam perspiciatis perferendis animi nisi quidem expedita laboriosam, a nam nesciunt? Ea, ipsum possimus. Id saepe impedit, in incidunt temporibus dicta minus aliquid molestiae, nesciunt sapiente eveniet ea blanditiis iure, itaque a odit autem ipsa porro! Deserunt nobis dignissimos assumenda totam id accusantium corrupti, architecto tempora, harum excepturi molestiae reiciendis amet veritatis sapiente vero laborum saepe recusandae ab adipisci perferendis numquam sunt. In illo ducimus delectus adipisci natus maiores temporibus quia, ullam, repellendus sit tenetur aliquid consequuntur quibusdam provident eaque dolor a distinctio, nemo corporis harum nesciunt! Ea nesciunt totam sapiente minima ab, suscipit voluptatum consectetur, eveniet tempore corrupti consequatur sunt quis iste nisi excepturi aut! Vero obcaecati sit ab molestiae enim, exercitationem architecto sapiente? At mollitia iusto modi laboriosam magni libero ut optio molestiae velit consequuntur? Iste minima numquam obcaecati. </div>
+       
+
+     </main>
+
+     <footer class="container-fluid">
+        <p style="float:left!important; margin-left:20px;">Made by  <a class="rickroll" href="https://www.youtube.com/watch?v=oHg5SJYRHA0" target="_blank">Wix.com</a> </p>
+        <p>Copyright 2020 - All rights reserved.</p>
+    </footer>
+</body>
+<script src=""></script> 
+</html>
